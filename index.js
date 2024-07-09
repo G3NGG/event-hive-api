@@ -2,6 +2,8 @@ import express from 'express'
 import mongoose from 'mongoose'
 import { dbConnection } from './config/DB.js';
 import 'dotenv/config'
+import { routerApp } from './route/college_route.js';
+
 
 
 
@@ -10,9 +12,11 @@ dbConnection();
 
 // creating an Express app
 const app = express();
+app.use(routerApp);
 
 // middleware
 app.use(express.json())
+
 
 
 
