@@ -7,7 +7,7 @@ eventRouter.post('/event', addEvent)
 
 eventRouter.get('/event',getEvents)
 
-eventRouter.get('/eventt/:id',getEvent)
+eventRouter.get('/event/:id',getEvent)
 
 eventRouter.patch('/event/:id:eventStatus',updateEvent)
 
