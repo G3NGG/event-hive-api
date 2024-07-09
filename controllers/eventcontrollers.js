@@ -4,7 +4,10 @@ export const addEvent = async(req, res,next) => {
    
     try {
         console.log('request', req.body)
-         const addData = await eventModel.create(req.body);
+         const addData = await eventModel.create({
+            ...req.body,
+            Banner:req.file.filename
+         });
          res.status(201).json(addData);
    
     } catch (error) {

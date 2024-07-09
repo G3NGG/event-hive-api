@@ -1,15 +1,14 @@
 import { Router } from "express";
 import { addEvent, deleteEvent,  getEvent, getEvents, getEvent,  updateEvent,  } from "../controllers/eventcontrollers.js";
 
-export const statementRouter = Router()
+export const eventRouter = Router()
 
-eventRouter.post('/statement', addEvent)
+eventRouter.post('/event', addEvent)
 
-eventRouter.get('/statement',getEvents)
+eventRouter.get('/event',getEvents)
 
-eventRouter.get('/statement/:id',getEvent)
+eventRouter.get('/eventt/:id',getEvent)
 
-eventRouter.patch('/statement/:id:eventStatus',updateEvent)
+eventRouter.patch('/event/:id:eventStatus',updateEvent)
 
-eventRouter.delete('/statement/:id',deleteEvent)
-
+eventRouter.delete('/event/:id',deleteEvent)
